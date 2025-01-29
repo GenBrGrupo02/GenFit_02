@@ -5,12 +5,12 @@ function Navbar() {
             			   bg-indigo-900 text-white'>
             
                 <div className="container flex justify-between text-lg">
-                    Genfit
+                    Blog Pessoal
 
                     <div className='flex gap-4'>
-                        Exercícios
-                        Objetivo
-                        Usuários
+                        Postagens
+                        Temas
+                        Perfil
                         Sair
                     </div>
                 </div>
