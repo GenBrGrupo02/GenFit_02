@@ -1,14 +1,15 @@
 function Home() {
     return (
         <>
-        <div className="flex flex-col md:flex-row gap-4 p-6 text-neutral-content rounded-lg shadow-lg">            <div style={{
+            
+            <div style={{
                 width: "100vw",
                 height: "150vh",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 position: "relative",
-                background: "linear-gradient(to , #000000, #0D1D38)"
+                background: "linear-gradient(to bottom , #000000,rgb(12, 33, 65))"
             }}>
                 <div>
                     <div style={{
@@ -36,19 +37,15 @@ function Home() {
                             }}>
                                 TRANSFORME SEU CORPO,<br /> FORTALEÇA SUA MENTE.
                             </h2>
-                        
-                        </div>
-                        <p className="font-body text-lg text-center mt-6 text-gray-300"
-                                style={{
-                                    position: "relative",
+                            <p className="font-body text-lg" style={{
+                                    position: "absolute",
                                     maxWidth: "80%",
-                                    transform: "translateY(300%)", 
+                                    transform: "translateX(80%) translateY(680%)", 
                                 }}>
                                 Aqui, cada treino é um passo para a melhor versão de você.
                             </p>
 
                         <div style={{
-                            marginTop: "100px",
                             width: "50%",
                             display: "flex",
                             justifyContent: "center",
@@ -98,8 +95,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-            </div>
-
+            
         </>
     );
 }
