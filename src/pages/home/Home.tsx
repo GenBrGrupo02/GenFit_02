@@ -1,7 +1,7 @@
 function Home() {
     return (
         <>
-            <div style={{
+        <div className="flex flex-col md:flex-row gap-4 p-6 text-neutral-content rounded-lg shadow-lg">            <div style={{
                 width: "100vw",
                 height: "150vh",
                 display: "flex",
@@ -36,13 +36,16 @@ function Home() {
                             }}>
                                 TRANSFORME SEU CORPO,<br /> FORTALEÇA SUA MENTE.
                             </h2>
-                            <p className="font-body text-lg" style={{
-                                transform: "translateX(80%)",
-                                marginTop: "150px",
-                            }}>
+                        
+                        </div>
+                        <p className="font-body text-lg text-center mt-6 text-gray-300"
+                                style={{
+                                    position: "relative",
+                                    maxWidth: "80%",
+                                    transform: "translateY(300%)", 
+                                }}>
                                 Aqui, cada treino é um passo para a melhor versão de você.
                             </p>
-                        </div>
 
                         <div style={{
                             marginTop: "100px",
@@ -88,13 +91,15 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                        <div className="flex justify-center mt-12">
-                            <button className="btn btn-primary rounded-xl text-2xl font-body px-12 py-1">
+                    <div className="flex justify-center mt-12">
+                        <button className="btn btn-primary rounded-xl text-2xl font-body px-12 py-1">
                             CONHEÇA NOSSOS PLANOS
-                            </button>
-                        </div>
+                        </button>
+                    </div>
                 </div>
             </div>
+            </div>
+
         </>
     );
 }
