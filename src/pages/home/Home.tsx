@@ -1,6 +1,7 @@
 function Home() {
     return (
         <>
+            
             <div style={{
                 width: "100vw",
                 height: "150vh",
@@ -8,7 +9,7 @@ function Home() {
                 justifyContent: "center",
                 alignItems: "center",
                 position: "relative",
-                background: "linear-gradient(to , #000000, #0D1D38)"
+                background: "linear-gradient(to bottom , #000000,rgb(12, 33, 65))"
             }}>
                 <div>
                     <div style={{
@@ -37,15 +38,15 @@ function Home() {
                                 TRANSFORME SEU CORPO,<br /> FORTALEÇA SUA MENTE.
                             </h2>
                             <p className="font-body text-lg" style={{
-                                transform: "translateX(80%)",
-                                marginTop: "150px",
-                            }}>
+                                    position: "absolute",
+                                    maxWidth: "80%",
+                                    transform: "translateX(80%) translateY(680%)", 
+                                }}>
                                 Aqui, cada treino é um passo para a melhor versão de você.
                             </p>
                         </div>
 
                         <div style={{
-                            marginTop: "100px",
                             width: "50%",
                             display: "flex",
                             justifyContent: "center",
@@ -95,6 +96,7 @@ function Home() {
                         </div>
                 </div>
             </div>
+            
         </>
     );
 }
