@@ -3,11 +3,12 @@ function Home() {
         <>
             
             <div style={{
+                
                 width: "100vw",
                 height: "150vh",
                 display: "flex",
                 justifyContent: "center",
-                alignItems: "center",
+                alignItems: "flex-start",
                 position: "relative",
                 background: "linear-gradient(to bottom , #000000,rgb(12, 33, 65))"
             }}>
@@ -48,6 +49,7 @@ function Home() {
                         </div>
 
                         <div style={{
+                            marginTop: "100px",
                             width: "50%",
                             display: "flex",
                             justifyContent: "center",
@@ -97,7 +99,6 @@ function Home() {
                         </div>
                 </div>
             </div>
-            
         </>
     );
 }
