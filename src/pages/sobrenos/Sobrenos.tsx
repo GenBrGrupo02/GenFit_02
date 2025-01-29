@@ -1,4 +1,4 @@
-function SobreNos() {
+function Sobrenos() {
     return (
         <>
             <h1 className="text-5xl font-bold text-center mt-20">Nossos Personais</h1>
@@ -100,5 +100,5 @@ function SobreNos() {
     )
 }
 
-export default SobreNos
+export default Sobrenos
 
