@@ -5,8 +5,19 @@ export default {
 "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        title: ['Rowdies', 'sans-serif'],
+        body: ['Oswald', 'sans-serif'],
+      }
+    },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      "night",
+      "winter",
+    ],
+  },
 }
 
