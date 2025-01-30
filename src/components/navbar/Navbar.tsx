@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "winter");
@@ -15,8 +16,7 @@ function Navbar() {
   return (
     <div className="w-full flex justify-center py-4 bg-base-100 text-white ">
       <div className="container flex justify-between text-lg ">
-        <span className="font-title text-yellow-500">GENFIT</span>
-        <div>
+        <div className="mr-auto">
           <img
             src="https://i.imgur.com/UoA4cEN.png"
             alt="Imagem da Página Home"
@@ -26,12 +26,14 @@ function Navbar() {
             }}
           />
         </div>
+
         <div className="flex gap-8 font-body  justify-end items-center ">
-          <button className="btn btn-outline">PERFIL</button>
-          <button className="btn btn-outline btn-primary">EXERCÍCIOS</button>
-          <button className="btn btn-outline btn-secondary">OBJETIVOS</button>
-          <button className="btn btn-outline btn-warning">SOBRE NÓS</button>
-          <button className="btn btn-outline btn-accent">SAIR</button>
+          <Link to="/login" className="hover:underline">
+            <button className="btn btn-outline">LOGIN</button>
+          </Link>
+          <Link to="/sobrenos" className="hover:underline">
+            <button className="btn btn-outline btn-warning">SOBRE NÓS</button>
+          </Link>
         </div>
       </div>
     </div>

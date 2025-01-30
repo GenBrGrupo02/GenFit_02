@@ -37,15 +37,18 @@ function Home() {
                             zIndex: 2,
                             position: "relative",
                         }}>
+                            
                             <h2 className="font-title text-[2.7vw] text-primary" style={{
                                 position: "absolute",
                                 top: "20%",
                                 transform: "translateX(60%) translateY(-50%)",
                                 textShadow: "2px 2px 5px rgba(0, 0, 0, 0.7)",
                             }}>
-                                TRANSFORME SEU CORPO,<br /> FORTALEÇA SUA MENTE.
+                                <span className="font-title text-yellow-500">GENFIT</span> <br/> TRANSFORME SEU CORPO,<br /> FORTALEÇA SUA MENTE.
                             </h2>
-                            <p className="font-body text-[1vw] text-primary" style={{
+                            <br />
+                            <br />
+                            <p className="font-body text-yellow-500" style={{
                                 justifyContent: "center",
                                 position: "relative",
                                 maxWidth: "80%",
