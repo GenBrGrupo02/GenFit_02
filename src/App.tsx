@@ -9,6 +9,7 @@ import Sobrenos from "./pages/sobrenos/Sobrenos";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Perfil from "./pages/perfil/Perfil";
 import { AuthProvider } from "./contexts/AuthContext";
+import Exercicios from "./pages/exercicios/Exercicios";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/sobrenos" element={<Sobrenos />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/perfil" element={<Perfil />} />
+            <Route path="/exercicios" element={<Exercicios />} />
           </Routes>
           <Footer />
         </BrowserRouter>

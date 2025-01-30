@@ -1,6 +1,6 @@
-/* import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
-import { AuthContext } from "../../../contexts/AuthContext";
+import { AuthContext } from "../../contexts/AuthContext.tsx";
 import { InfinitySpin } from "react-loader-spinner";
 import ExercicioCard from "./ExercicioCard";
 import Exercicio from "../../models/Exercicio";
@@ -63,4 +63,4 @@ function ListaExercicios() {
     );
 }
 
-export default ListaExercicios; */
+export default ListaExercicios;
