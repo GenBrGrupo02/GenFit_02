@@ -44,7 +44,7 @@ function Dashboard() {
           </div>
         </div>
         <div className="mt-5 flex lg:mt-0 lg:ml-4 mr-12">
-          <Link to="/exercicios">
+          <Link to="/exercicio">
             <span className="hidden sm:block">
               <button
                 type="button"

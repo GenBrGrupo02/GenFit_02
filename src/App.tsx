@@ -25,7 +25,7 @@ function App() {
             <Route path="/sobrenos" element={<Sobrenos />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/perfil" element={<Perfil />} />
-            <Route path="/exercicios" element={<ListaExercicios />} />
+            <Route path="/exercicio" element={<ListaExercicios />} />
             <Route path="/objetivos" element={<ListaObjetivos />} />
           </Routes>
           <Footer />
