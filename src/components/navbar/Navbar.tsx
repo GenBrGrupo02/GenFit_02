@@ -1,17 +1,6 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "winter");
-
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(theme === "night" ? "winter" : "night");
-  };
 
   return (
     <div className="w-full flex justify-center py-4 bg-base-100 text-white ">
