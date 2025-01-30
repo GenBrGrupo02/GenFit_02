@@ -1,10 +1,14 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
 
 function Navbar() {
+  const { usuario, handleLogout } = useContext(AuthContext); 
+
   return (
     <>
-      <div className="w-full flex justify-center py-4 bg-base-100 text-white ">
-        <div className="container flex justify-between text-lg ">
+      <div className="w-full flex justify-center py-4 bg-base-100 text-white">
+        <div className="container flex justify-between text-lg">
           <div className="mr-auto">
             <Link to="/" className="hover:underline">
               <img
