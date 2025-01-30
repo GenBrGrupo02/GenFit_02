@@ -95,14 +95,6 @@ function CardExercicioInstrutor({ exercicio }: CardExerciciosProps) {
       >
         <button>Deletar</button>
       </Link>
-      <div className="card-actions justify-between p-4">
-        <Link
-          to={`/editarexercicio/${exercicio.id}`}
-          className="btn btn-primary w-1/2 hover:bg-indigo-600"
-        >
-          Editar
-        </Link>
-      </div>
     </div>
   );
 }
