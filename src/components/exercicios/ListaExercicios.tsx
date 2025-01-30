@@ -16,7 +16,7 @@ function ListaExercicios() {
 
   async function buscarExercicios() {
     try {
-      await buscar("/exercicios", setExercicios, {
+      await buscar("/exercicio", setExercicios, {
         headers: {
           Authorization: token,
         },
