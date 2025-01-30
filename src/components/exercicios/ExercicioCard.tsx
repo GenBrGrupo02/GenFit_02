@@ -1,4 +1,4 @@
-/* import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Exercicio from '../../models/Exercicio'
 
 interface CardExerciciosProps {
@@ -42,4 +42,3 @@ function CardExercicio({ exercicio }: CardExerciciosProps) {
 }
 
 export default CardExercicio
- */

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "http://localhost:8080"
+    baseURL: "https://genfit-k0rq.onrender.com/"
 })
 
 export const cadastrarUsuario = async (url : string, dados: Object, setDados: Function  ) => {

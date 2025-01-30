@@ -14,20 +14,13 @@ function Cadastro() {
   const [confirmaSenha, setConfirmaSenha] = useState<string>("");
 
   const [usuario, setUsuario] = useState<Usuario>({
-    id: 0,
     nome: "",
     usuario: "",
     senha: "",
     foto: "",
-    peso: null as number | null, 
-    altura: null as number | null,
+    peso: 0, 
+    altura: 0,
   });
-
-  useEffect(() => {
-    if (usuario.id !== 0) {
-      retornar();
-    }
-  }, [usuario]);
 
   function retornar() {
     navigate("/login");
@@ -133,9 +126,9 @@ function Cadastro() {
                     className="size-4"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M8.75 2.5a.75.75 0 0 0-1.5 0v.508a32.661 32.661 0 0 0-4.624.434.75.75 0 0 0 .246 1.48l.13-.021-1.188 4.75a.75.75 0 0 0 .33.817A3.487 3.487 0 0 0 4 11c.68 0 1.318-.195 1.856-.532a.75.75 0 0 0 .33-.818l-1.25-5a31.31 31.31 0 0 1 2.314-.141V12.012c-.882.027-1.752.104-2.607.226a.75.75 0 0 0 .213 1.485 22.188 22.188 0 0 1 6.288 0 .75.75 0 1 0 .213-1.485 23.657 23.657 0 0 0-2.607-.226V4.509c.779.018 1.55.066 2.314.14L9.814 9.65a.75.75 0 0 0 .329.818 3.487 3.487 0 0 0 1.856.532c.68 0 1.318-.195 1.856-.532a.75.75 0 0 0 .33-.818L12.997 4.9l.13.022a.75.75 0 1 0 .247-1.48 32.66 32.66 0 0 0-4.624-.434V2.5ZM3.42 9.415a2 2 0 0 0 1.16 0L4 7.092l-.58 2.323ZM12 9.5a2 2 0 0 1-.582-.085L12 7.092l.58 2.323A2 2 0 0 1 12 9.5Z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     />
                   </svg>
 
@@ -145,7 +138,7 @@ function Cadastro() {
                     name="peso"
                     placeholder="Digite seu peso"
                     className="grow"
-                    value={usuario.peso ?? ""}
+                    value={usuario.peso}
                     onChange={(e: ChangeEvent<HTMLInputElement>) =>
                       atualizarEstado(e)
                     }
@@ -161,9 +154,9 @@ function Cadastro() {
                     className="size-4"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M8 14a.75.75 0 0 1-.75-.75V4.56L4.03 7.78a.75.75 0 0 1-1.06-1.06l4.5-4.5a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1-1.06 1.06L8.75 4.56v8.69A.75.75 0 0 1 8 14Z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     />
                   </svg>
 
@@ -173,7 +166,7 @@ function Cadastro() {
                     name="altura"
                     placeholder="Digite sua altura"
                     className="grow"
-                    value={usuario.altura ?? ""}
+                    value={usuario.altura}
                     onChange={(e: ChangeEvent<HTMLInputElement>) =>
                       atualizarEstado(e)
                     }
@@ -190,9 +183,9 @@ function Cadastro() {
                   >
                     <path d="M9.5 8.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M2.5 5A1.5 1.5 0 0 0 1 6.5v5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 13.5 5h-.879a1.5 1.5 0 0 1-1.06-.44l-1.122-1.12A1.5 1.5 0 0 0 9.38 3H6.62a1.5 1.5 0 0 0-1.06.44L4.439 4.56A1.5 1.5 0 0 1 3.38 5H2.5ZM11 8.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                      clip-rule="evenodd"
+                      clipRule="evenodd"
                     />
                   </svg>
                   <input
