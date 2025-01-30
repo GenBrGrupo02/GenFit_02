@@ -22,6 +22,9 @@ function Navbar() {
             <Link to="/login" className="hover:underline">
               <button className="btn btn-outline">LOGIN</button>
             </Link>
+            <Link to="/logininstrutores" className="hover:underline">
+              <button className="btn btn-outline btn-secondary text-base-300">INSTRUTORES</button>
+            </Link>
             <Link to="/sobrenos" className="hover:underline">
               <button className="btn btn-outline btn-warning">SOBRE NÓS</button>
             </Link>
