@@ -12,6 +12,8 @@ import ListaExercicios from "./components/exercicios/ListaExercicios";
 import ListaObjetivos from "./components/objetivos/listaobjetivos/ListaObjetivos";
 import LoginInstrutor from "./pages/logininstrutor/LoginInstrutor";
 import DashBoardInstrutor from "./pages/dashboardinstrutor/DashboardInstrutor";
+import InstrutorExercicios from "./pages/dashboardinstrutor/InstrutorExercicios";
+import InstrutorObjetivos from "./pages/dashboardinstrutor/InstrutorObjetivos";
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
             <Route path="/perfil" element={<Perfil />} />
             <Route path="/exercicio" element={<ListaExercicios />} />
             <Route path="/objetivos" element={<ListaObjetivos />} />
+            <Route path="/instrutorexercicios" element={<InstrutorExercicios />} />
+            <Route path="/instrutorobjetivos" element={<InstrutorObjetivos />} />
           </Routes>
           <Footer />
         </BrowserRouter>

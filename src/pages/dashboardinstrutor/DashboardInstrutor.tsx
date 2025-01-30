@@ -44,7 +44,7 @@ function DashBoardInstrutor() {
           </div>
         </div>
         <div className="mt-5 flex lg:mt-0 lg:ml-4 mr-12">
-          <Link to="/exercicio">
+          <Link to="/instrutorexercicios">
             <span className="hidden sm:block">
               <button
                 type="button"
@@ -52,12 +52,12 @@ function DashBoardInstrutor() {
                 text-sm font-semibold text-gray-900 shadow-xs ring-inset hover:bg-yellow-200"
               >
                 <Barbell size={20} weight="fill" className="mr-1.5" />
-                Exercícios
+                Criar Exercícios
               </button>
             </span>
           </Link>
           <span className="sm:ml-3">
-            <Link to="/objetivos">
+            <Link to="/instrutorobjetivos">
               <span className="hidden sm:block">
                 <button
                   type="button"
@@ -65,7 +65,7 @@ function DashBoardInstrutor() {
                 text-sm font-semibold text-gray-900 shadow-xs ring-inset hover:bg-success"
                 >
                   <Crosshair size={20} weight="fill" className="mr-1.5" />
-                  Objetivos
+                  Criar Objetivos
                 </button>
               </span>
             </Link>
@@ -82,9 +82,6 @@ function DashBoardInstrutor() {
             </Link>
           </span>
         </div>
-      </div>
-      <div>
-        <ListaExercicios />
       </div>
     </>
   );
