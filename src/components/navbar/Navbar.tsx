@@ -22,13 +22,19 @@ function Navbar() {
             </Link>
           </div>
 
-          <div className="flex gap-8 font-body  justify-end items-center ">
-            <Link to="/login" className="hover:underline">
-              <button className="btn btn-outline">LOGIN</button>
-            </Link>
-            <Link to="/logininstrutores" className="hover:underline">
-              <button className="btn btn-outline btn-secondary text-base-300">INSTRUTORES</button>
-            </Link>
+          <div className="flex gap-8 font-body justify-end items-center">
+            {!usuario.token ? (
+              <Link to="/login" className="hover:underline">
+                <button className="btn btn-outline">LOGIN</button>
+              </Link>
+            ) : (
+              <>
+                <span className="text-lg">{usuario.nome}</span>
+                <button className="btn btn-outline" onClick={handleLogout}>
+                  LOGOUT
+                </button>
+              </>
+            )}
             <Link to="/sobrenos" className="hover:underline">
               <button className="btn btn-outline btn-warning">SOBRE NÓS</button>
             </Link>
