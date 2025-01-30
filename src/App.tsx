@@ -50,7 +50,7 @@ function App() {
               <Route path="/verexercicios" element={<VerExercicios />} />
               {" "}
               <Route path="/deletarexercicio/:id" element={<DeletarExercicio />} />
-              <Route path="/editarexercicio/:id" element={<ExercicioForm />} />
+              <Route path="/editarexercicio/:id" element={<ExercicioForm onSubmit={() => {}} />} />
               {" "}
             </Routes>
           </div>
