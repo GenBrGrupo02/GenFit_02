@@ -19,6 +19,8 @@ function Cadastro() {
     usuario: "",
     senha: "",
     foto: "",
+    peso: 0,
+    altura: 0,
   });
 
   useEffect(() => {
@@ -65,11 +67,6 @@ function Cadastro() {
 
   return (
     <>
-      <input
-        type="checkbox"
-        value="winter"
-        className="checkbox theme-controller"
-      />
       <div
         className="grid grid-cols-1 lg:grid-cols-2 h-screen 
             place-items-center font-bold"
@@ -81,7 +78,7 @@ function Cadastro() {
         >
           <h2 className="text-base-content text-6xl mb-3">Cadastrar</h2>
           <div className="flex flex-col w-full my-1">
-            <label className="input input-bordered flex items-center gap-2 input-lg w-full">
+            <label className="input input-bordered flex items-center gap-2 input-md w-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -104,7 +101,7 @@ function Cadastro() {
             </label>
           </div>
           <div className="flex flex-col w-full my-1">
-            <label className="input input-bordered flex items-center gap-2 input-lg w-full">
+            <label className="input input-bordered flex items-center gap-2 input-md w-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -127,10 +124,65 @@ function Cadastro() {
               />
             </label>
           </div>
-
           <div className="flex flex-col w-full my-1">
-            <label className="input input-bordered flex items-center gap-2 input-lg w-full">
-            <svg
+            <label className="input input-bordered flex items-center gap-2 input-md w-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                className="size-4"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8.75 2.5a.75.75 0 0 0-1.5 0v.508a32.661 32.661 0 0 0-4.624.434.75.75 0 0 0 .246 1.48l.13-.021-1.188 4.75a.75.75 0 0 0 .33.817A3.487 3.487 0 0 0 4 11c.68 0 1.318-.195 1.856-.532a.75.75 0 0 0 .33-.818l-1.25-5a31.31 31.31 0 0 1 2.314-.141V12.012c-.882.027-1.752.104-2.607.226a.75.75 0 0 0 .213 1.485 22.188 22.188 0 0 1 6.288 0 .75.75 0 1 0 .213-1.485 23.657 23.657 0 0 0-2.607-.226V4.509c.779.018 1.55.066 2.314.14L9.814 9.65a.75.75 0 0 0 .329.818 3.487 3.487 0 0 0 1.856.532c.68 0 1.318-.195 1.856-.532a.75.75 0 0 0 .33-.818L12.997 4.9l.13.022a.75.75 0 1 0 .247-1.48 32.66 32.66 0 0 0-4.624-.434V2.5ZM3.42 9.415a2 2 0 0 0 1.16 0L4 7.092l-.58 2.323ZM12 9.5a2 2 0 0 1-.582-.085L12 7.092l.58 2.323A2 2 0 0 1 12 9.5Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+
+              <input
+                type="number"
+                id="peso"
+                name="peso"
+                placeholder="Digite seu peso"
+                className="grow"
+                value={usuario.peso}
+                onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                  atualizarEstado(e)
+                }
+              />
+            </label>
+          </div>
+          <div className="flex flex-col w-full my-1">
+            <label className="input input-bordered flex items-center gap-2 input-md w-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                className="size-4"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 14a.75.75 0 0 1-.75-.75V4.56L4.03 7.78a.75.75 0 0 1-1.06-1.06l4.5-4.5a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1-1.06 1.06L8.75 4.56v8.69A.75.75 0 0 1 8 14Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+
+              <input
+                type="number"
+                id="altura"
+                name="altura"
+                placeholder="Digite sua Altura"
+                className="grow"
+                value={usuario.altura}
+                onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                  atualizarEstado(e)
+                }
+              />
+            </label>
+          </div>
+          <div className="flex flex-col w-full my-1">
+            <label className="input input-bordered flex items-center gap-2 input-md w-full">
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
                 fill="currentColor"
@@ -158,7 +210,7 @@ function Cadastro() {
           </div>
           <></>
           <div className="flex flex-col w-full my-1">
-            <label className="input input-bordered flex items-center gap-2 input-lg w-full">
+            <label className="input input-bordered flex items-center gap-2 input-md w-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -185,7 +237,7 @@ function Cadastro() {
             </label>
           </div>
           <div className="flex flex-col w-full my-1">
-            <label className="input input-bordered flex items-center gap-2 input-lg w-full">
+            <label className="input input-bordered flex items-center gap-2 input-md w-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -211,6 +263,7 @@ function Cadastro() {
               />
             </label>
           </div>
+
           <div className="flex justify-center w-full p-4">
             <button
               className="btn btn-primary text-neutral font-bold w-1/2 py-2 mr-3"
