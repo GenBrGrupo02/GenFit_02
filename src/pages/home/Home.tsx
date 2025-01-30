@@ -1,7 +1,7 @@
 function Home() {
 
-    const scrollToSection = () => {
-        const section = document.getElementById("planos");
+    const scrollToSection = (sectionId: any) => {
+        const section = document.getElementById(sectionId);
         if (section) {
             section.scrollIntoView({ behavior: "smooth" });
         }
@@ -9,7 +9,7 @@ function Home() {
 
     return (
         <>
-            <div style={{
+            <div id="topo" style={{
                 width: "100vw",
                 height: "150vh",
                 display: "flex",
@@ -44,11 +44,11 @@ function Home() {
                                 TRANSFORME SEU CORPO,<br /> FORTALEÇA SUA MENTE.
                             </h2>
                             <p className="font-body text-lg text-primary" style={{
-                                    justifyContent: "center",
-                                    position: "relative",
-                                    maxWidth: "80%",
-                                    transform: "translateX(99%) translateY(680%)", 
-                                }}>
+                                justifyContent: "center",
+                                position: "relative",
+                                maxWidth: "80%",
+                                transform: "translateX(99%) translateY(680%)",
+                            }}>
                                 Aqui, cada treino é um passo para a melhor versão de você.
                             </p>
                         </div>
@@ -72,7 +72,6 @@ function Home() {
                         </div>
                     </div>
 
-                    {/* Estatísticas */}
                     <div className="flex justify-center px-4 mt-12">
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
                             <div className="stat w-90 bg-neutral text-white shadow-xl rounded-xl">
@@ -93,19 +92,17 @@ function Home() {
                         </div>
                     </div>
 
-                    {/* Botão para rolar até planos */}
                     <div className="flex justify-center mt-12">
-                        <button onClick={scrollToSection} className="btn btn-primary rounded-xl text-2xl font-body px-12 py-1">
+                        <button onClick={() => scrollToSection("planos")} className="btn btn-primary rounded-xl text-2xl font-body px-12 py-1">
                             CONHEÇA NOSSOS PLANOS
                         </button>
                     </div>
                 </div>
             </div>
 
-            {/* Seção de Planos */}
-            <div id="planos" 
+            <div id="planos"
                 className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-[#234270] to-black p-10">
-                
+
                 <h2 className="text-4xl font-title text-primary mb-8">NOSSOS PLANOS</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -137,7 +134,7 @@ function Home() {
                             <button className="btn btn-primary mt-4 rounded-xl">Assinar</button>
                         </div>
                     </div>
-                    
+
                     <div className="card w-80 bg-base-100 shadow-xl rounded-2xl border border-yellow-400">
                         <div className="card-body text-center">
                             <h3 className="text-2xl font-bold text-yellow-400">Plano Ouro</h3>
@@ -152,6 +149,15 @@ function Home() {
                         </div>
                     </div>
                 </div>
+                <button
+                    onClick={() => scrollToSection("topo")}
+                    className="btn btn-neutral btn-circle p-2 mt-4"
+                    title="Voltar ao topo"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 15l7-7 7 7"></path>
+                    </svg>
+                </button>
             </div>
         </>
     );
