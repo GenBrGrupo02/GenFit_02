@@ -27,29 +27,31 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
           <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/cadastro" element={<Cadastro />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/logininstrutores" element={<LoginInstrutor />} />
-            <Route path="/instrutores" element={<DashBoardInstrutor />} />
-            <Route path="/sobrenos" element={<Sobrenos />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/perfil" element={<Perfil />} />
-            <Route path="/exercicio" element={<ListaExercicios />} />
-            <Route path="/objetivos" element={<ListaObjetivos />} />
-            <Route path="/instrutorexercicios" element={<InstrutorExercicios />} />
-            <Route path="/instrutorobjetivos" element={<InstrutorObjetivos />} />
-            {" "}
-            <Route path="/todosexercicios" element={<TodosExercicios />} />
-            <Route path="/todosobjetivos" element={<TodosObjetivos />} />
-            <Route path="/verobjetivos" element={<VerObjetivos />} />
-            <Route path="/verexercicios" element={<VerExercicios />} />
-            <Route path="/deletarexercicio/:id" element={<DeletarExercicio />} />
-            <Route path="/editarexercicio/:id" element={<ExercicioForm/>} />
-            {" "}
-          </Routes>
+          <div className=" bg-slate-800 min-h-[90vh]">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/cadastro" element={<Cadastro />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/logininstrutores" element={<LoginInstrutor />} />
+              <Route path="/instrutores" element={<DashBoardInstrutor />} />
+              <Route path="/sobrenos" element={<Sobrenos />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/perfil" element={<Perfil />} />
+              <Route path="/exercicio" element={<ListaExercicios />} />
+              <Route path="/objetivos" element={<ListaObjetivos />} />
+              <Route path="/instrutorexercicios" element={<InstrutorExercicios />} />
+              <Route path="/instrutorobjetivos" element={<InstrutorObjetivos />} />
+              {" "}
+              <Route path="/todosexercicios" element={<TodosExercicios />} />
+              <Route path="/todosobjetivos" element={<TodosObjetivos />} />
+              <Route path="/verobjetivos" element={<VerObjetivos />} />
+              <Route path="/verexercicios" element={<VerExercicios />} />
+              <Route path="/deletarexercicio/:id" element={<DeletarExercicio />} />
+              <Route path="/editarexercicio/:id" element={<ExercicioForm />} />
+              {" "}
+            </Routes>
+          </div>
           <Footer />
         </BrowserRouter>
       </AuthProvider>

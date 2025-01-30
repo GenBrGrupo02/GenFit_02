@@ -37,14 +37,14 @@ function Home() {
                             zIndex: 2,
                             position: "relative",
                         }}>
-                            
+
                             <h2 className="font-title text-[2.7vw] text-primary" style={{
                                 position: "absolute",
                                 top: "20%",
                                 transform: "translateX(60%) translateY(-50%)",
                                 textShadow: "2px 2px 5px rgba(0, 0, 0, 0.7)",
                             }}>
-                                <span className="font-title text-yellow-500">GENFIT</span> <br/> TRANSFORME SEU CORPO,<br /> FORTALEÇA SUA MENTE.
+                                <span className="font-title text-yellow-500">GENFIT</span> <br /> TRANSFORME SEU CORPO,<br /> FORTALEÇA SUA MENTE.
                             </h2>
                             <br />
                             <br />
@@ -153,13 +153,6 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <button
-                    onClick={() => scrollToSection("topo")}
-                    className="btn btn-neutral btn-circle p-2 mt-4"
-                    title="Voltar ao topo"
-                >
-                    
-                </button>
             </div>
         </>
     );
