@@ -1,10 +1,10 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import { ChangeEvent, useContext, useEffect, useState } from "react";
 import UsuarioLogin from "../../models/UsuarioLogin";
 import { RotatingLines } from "react-loader-spinner";
 
-function Login() {
+function LoginInstrutor() {
   const navigate = useNavigate();
 
   const { usuario, handleLogin, isLoading } = useContext(AuthContext);
@@ -15,7 +15,7 @@ function Login() {
 
   useEffect(() => {
     if (usuario.token !== "") {
-      navigate("/dashboard");
+      navigate("/instrutores");
     }
   }, [usuario]);
 
@@ -109,19 +109,6 @@ function Login() {
               </button>
 
               <hr className="border-slate-800 w-full" />
-
-              <p className="mt-3">
-                Ainda não tem uma conta?{" "}
-                <Link to="/cadastro" className="text-primary hover:underline">
-                  Cadastre-se
-                </Link>
-              </p>
-              <p className="-mb-4">
-                Página dos Instrutores - {" "}
-                <Link to="/logininstrutores" className="text-primary hover:underline">
-                  Login
-                </Link>
-              </p>
             </form>
             <div className="fundoLogin hidden lg:block"></div>
           </div>
@@ -131,4 +118,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LoginInstrutor;
