@@ -8,7 +8,6 @@ import {
 } from "@phosphor-icons/react";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
-import ListaExercicios from "../../components/exercicios/ListaExercicios";
 
 function DashBoardInstrutor() {
   const navigate = useNavigate();
@@ -35,7 +34,7 @@ function DashBoardInstrutor() {
           <div className="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6 mb-8">
             <div className="mt-2 flex items-center text-sm text-neutral-content">
               <MapPin size={20} weight="fill" className="mr-1.5" />
-              Academia Gen - Rua General Brasil, 1000
+              Academia Gen - Rua Geração Brasil, 1000
             </div>
             <div className="mt-2 flex items-center text-sm text-neutral-content">
               <Medal size={20} weight="fill" className="mr-1.5" />
