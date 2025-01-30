@@ -10,8 +10,7 @@ function Home() {
     return (
         <>
             <div id="topo" style={{
-                width: "100vw",
-                height: "150vh",
+                height: "100vh",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "flex-start",
@@ -20,6 +19,9 @@ function Home() {
             }}>
                 <div>
                     <div style={{
+                        marginTop: "5vh",
+                        borderTop: "2px solid gray",
+                        borderBottom: "2px solid gray",
                         display: "flex",
                         flexDirection: "row",
                         justifyContent: "space-between",
@@ -35,26 +37,25 @@ function Home() {
                             zIndex: 2,
                             position: "relative",
                         }}>
-                            <h2 className="font-title text-5xl text-primary " style={{
+                            <h2 className="font-title text-[2.7vw] text-primary" style={{
                                 position: "absolute",
                                 top: "20%",
-                                transform: "translateX(60%)",
+                                transform: "translateX(60%) translateY(-50%)",
                                 textShadow: "2px 2px 5px rgba(0, 0, 0, 0.7)",
                             }}>
                                 TRANSFORME SEU CORPO,<br /> FORTALEÇA SUA MENTE.
                             </h2>
-                            <p className="font-body text-lg text-primary" style={{
+                            <p className="font-body text-[1vw] text-primary" style={{
                                 justifyContent: "center",
                                 position: "relative",
                                 maxWidth: "80%",
-                                transform: "translateX(99%) translateY(680%)",
+                                transform: "translateX(99%) translateY(300%)",
                             }}>
                                 Aqui, cada treino é um passo para a melhor versão de você.
                             </p>
                         </div>
 
                         <div style={{
-                            marginTop: "50px",
                             width: "50%",
                             display: "flex",
                             transform: "translateX(25%)",
@@ -65,7 +66,7 @@ function Home() {
                                 src="https://i.imgur.com/zhk6sgx.png"
                                 alt="Imagem da Página Home"
                                 style={{
-                                    width: "800px",
+                                    width: "80vh",
                                     height: "auto",
                                 }}
                             />
@@ -101,7 +102,7 @@ function Home() {
             </div>
 
             <div id="planos"
-                className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-[#234270] to-black p-10">
+                className="flex flex-col items-center justify-center min-h-screen w-full bg-gradient-to-b from-[#234270] to-black p-10">
 
                 <h2 className="text-4xl font-title text-primary mb-8">NOSSOS PLANOS</h2>
 
