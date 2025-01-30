@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Exercicio from "../../models/Exercicio";
 
 interface CardExerciciosProps {
@@ -42,14 +41,6 @@ function CardExercicio({ exercicio }: CardExerciciosProps) {
             </a>
           </p>
         )}
-      </div>
-      <div className="card-actions justify-between p-4">
-        <Link to="" className="btn btn-primary w-1/2 hover:bg-indigo-600">
-          Editar
-        </Link>
-        <Link to="" className="btn btn-error w-1/2 hover:bg-red-600">
-          Deletar
-        </Link>
       </div>
     </div>
   );

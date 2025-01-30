@@ -16,6 +16,10 @@ import InstrutorExercicios from "./pages/dashboardinstrutor/InstrutorExercicios"
 import InstrutorObjetivos from "./pages/dashboardinstrutor/InstrutorObjetivos";
 import TodosObjetivos from "./pages/objetivos/TodosObjetivos";
 import TodosExercicios from "./pages/exercicios/TodosExercicios";
+import VerObjetivos from "./pages/dashboardinstrutor/VerObjetivos";
+import VerExercicios from "./pages/dashboardinstrutor/VerExcercicios";
+import ExercicioForm from "./components/exercicios/FormExercicio";
+import DeletarExercicio from "./components/exercicios/DeletarExercicio";
 
 function App() {
   return (
@@ -40,6 +44,10 @@ function App() {
             {" "}
             <Route path="/todosexercicios" element={<TodosExercicios />} />
             <Route path="/todosobjetivos" element={<TodosObjetivos />} />
+            <Route path="/verobjetivos" element={<VerObjetivos />} />
+            <Route path="/verexercicios" element={<VerExercicios />} />
+            <Route path="/deletarexercicio/:id" element={<DeletarExercicio />} />
+            <Route path="/editarexercicio/:id" element={<ExercicioForm/>} />
             {" "}
           </Routes>
           <Footer />

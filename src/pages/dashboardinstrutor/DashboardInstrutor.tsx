@@ -69,6 +69,32 @@ function DashBoardInstrutor() {
               </span>
             </Link>
           </span>
+          <Link to="/verexercicios">
+            <span className="hidden sm:block sm:ml-3">
+              <button
+                type="button"
+                className="mr-1.5 px-3.5 py-2.5 inline-flex items-center rounded-md  bg-yellow-500
+                text-sm font-semibold text-gray-900 shadow-xs ring-inset hover:bg-yellow-200"
+              >
+                <Barbell size={20} weight="fill" className="mr-1.5" />
+                Ver Exercícios
+              </button>
+            </span>
+          </Link>
+          <span className="sm:ml-3">
+            <Link to="/verobjetivos">
+              <span className="hidden sm:block">
+                <button
+                  type="button"
+                  className="mr-1.5 px-3.5 py-2.5 inline-flex items-center rounded-md  bg-info
+                text-sm font-semibold text-gray-900 shadow-xs ring-inset hover:bg-success"
+                >
+                  <Crosshair size={20} weight="fill" className="mr-1.5" />
+                  Ver Objetivos
+                </button>
+              </span>
+            </Link>
+          </span>
           <span className="sm:ml-3">
             <Link
               to="/"

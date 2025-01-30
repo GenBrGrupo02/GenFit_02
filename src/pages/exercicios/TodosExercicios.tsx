@@ -16,7 +16,7 @@ function TodosExercicios() {
             <li>Exercícios</li>
           </ul>
         </div>
-        <div className=" scale-95 my-4 grid justify-items-center gap-8">
+        <div className="scale-95 my-4 grid justify-items-center gap-8">
           <ListaExercicios />
         </div>
       </div>

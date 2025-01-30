@@ -4,6 +4,7 @@ import {
   Crosshair,
   MapPin,
   Medal,
+  Ruler,
   SignOut,
 } from "@phosphor-icons/react";
 import { useContext, useEffect } from "react";
@@ -40,6 +41,10 @@ function Dashboard() {
             <div className="mt-2 flex items-center text-sm text-neutral-content">
               <Medal size={20} weight="fill" className="mr-1.5" />
               Plano Ouro
+            </div>
+            <div className="mt-2 flex items-center text-sm text-neutral-content">
+              <Ruler size={20} weight="fill" className="mr-1.5" />
+              IMC 20{usuario.imc}
             </div>
           </div>
         </div>

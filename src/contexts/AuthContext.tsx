@@ -1,12 +1,10 @@
-/* eslint-disable react-refresh/only-export-components */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { createContext, ReactNode, useState } from "react";
-
 import UsuarioLogin from "../models/UsuarioLogin";
 import { login } from "../services/Service";
 
 interface AuthContextProps {
   usuario: UsuarioLogin;
+  token: string;
   handleLogout(): void;
   handleLogin(usuario: UsuarioLogin): Promise<void>;
   isLoading: boolean;
@@ -16,19 +14,26 @@ interface AuthProviderProps {
   children: ReactNode;
 }
 
-export const AuthContext = createContext({} as AuthContextProps);
+export const AuthContext = createContext<AuthContextProps>(
+  {} as AuthContextProps
+);
 
 export function AuthProvider({ children }: AuthProviderProps) {
-  const [usuario, setUsuario] = useState<UsuarioLogin>({
-    id: 0,
-    nome: "",
-    usuario: "",
-    senha: "",
-    foto: "",
-    peso: 0,
-    altura: 0,
-    imc: 0,
-    token: "",
+  const [usuario, setUsuario] = useState<UsuarioLogin>(() => {
+    const storedUser = localStorage.getItem("usuario");
+    return storedUser
+      ? JSON.parse(storedUser)
+      : {
+          id: 0,
+          nome: "",
+          usuario: "",
+          senha: "",
+          foto: "",
+          peso: 0,
+          altura: 0,
+          imc: 0,
+          token: "",
+        };
   });
 
   const [isLoading, setIsLoading] = useState(false);
@@ -37,6 +42,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
     setIsLoading(true);
     try {
       await login(`/usuarios/logar`, usuarioLogin, setUsuario);
+
+      localStorage.setItem("usuario", JSON.stringify(usuario));
+
       alert("O Usuário foi autenticado com sucesso!");
     } catch (error) {
       alert("Os Dados do usuário estão inconsistentes!");
@@ -56,11 +64,18 @@ export function AuthProvider({ children }: AuthProviderProps) {
       imc: 0,
       token: "",
     });
+    localStorage.removeItem("usuario");
   }
 
   return (
     <AuthContext.Provider
-      value={{ usuario, handleLogin, handleLogout, isLoading }}
+      value={{
+        usuario,
+        token: usuario.token,
+        handleLogin,
+        handleLogout,
+        isLoading,
+      }}
     >
       {children}
     </AuthContext.Provider>
