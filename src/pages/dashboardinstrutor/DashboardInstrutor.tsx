@@ -8,7 +8,6 @@ import {
 } from "@phosphor-icons/react";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
-import ListaExercicios from "../../components/exercicios/ListaExercicios";
 
 function DashBoardInstrutor() {
   const navigate = useNavigate();

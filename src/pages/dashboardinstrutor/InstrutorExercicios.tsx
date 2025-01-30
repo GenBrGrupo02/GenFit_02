@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
-import ExercicioForm from "../../components/exercicios/FormExercicio.tsx";
+import ExercicioForm from "../../components/exercicios/FormExercicio";
+import Exercicio from "../../models/Exercicio";
 
 function InstrutorExercicios() {
+  const handleSubmitExercicio = (data: Exercicio) => {
+    console.log(data);
+  };
+
   return (
     <>
       <div>
@@ -22,7 +27,7 @@ function InstrutorExercicios() {
       </div>
       <div className="container mx-auto my-4 grid justify-items-center gap-8 h-screen">
         <div className="flex justify-center items-center w-full">
-          <ExercicioForm />
+          <ExercicioForm onSubmit={handleSubmitExercicio} />
         </div>
       </div>
     </>
