@@ -48,7 +48,7 @@ function Home() {
                             </h2>
                             <br />
                             <br />
-                            <p className="font-body text-yellow-500" style={{
+                            <p className="font-body text-yellow-500 text-[1vw]" style={{
                                 justifyContent: "center",
                                 position: "relative",
                                 maxWidth: "80%",

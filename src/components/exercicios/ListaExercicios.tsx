@@ -16,10 +16,12 @@ function ListaExercicios() {
     const token = usuario.token;
 
     async function buscarExercicios() {
+        console.log(token);
         try {
             await buscar('/exercicios', setExercicios, {
                 headers: {
                     Authorization: token,
+                    
                 },
             })
 
