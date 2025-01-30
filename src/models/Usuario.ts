@@ -6,8 +6,7 @@ export default interface Usuario {
   usuario: string;
   foto: string;
   senha: string;
-  peso: number;
-  altura: number;
+  peso: number | null;
+  altura: number | null;
   imc?: number | null;
 }
-

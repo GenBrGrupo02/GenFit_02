@@ -19,8 +19,8 @@ function Cadastro() {
     usuario: "",
     senha: "",
     foto: "",
-    peso: 0,
-    altura: 0,
+    peso: null as number | null, 
+    altura: null as number | null,
   });
 
   useEffect(() => {
@@ -145,7 +145,7 @@ function Cadastro() {
                     name="peso"
                     placeholder="Digite seu peso"
                     className="grow"
-                    value={usuario.peso}
+                    value={usuario.peso ?? ""}
                     onChange={(e: ChangeEvent<HTMLInputElement>) =>
                       atualizarEstado(e)
                     }
@@ -171,9 +171,9 @@ function Cadastro() {
                     type="number"
                     id="altura"
                     name="altura"
-                    placeholder="Digite sua Altura"
+                    placeholder="Digite sua altura"
                     className="grow"
-                    value={usuario.altura}
+                    value={usuario.altura ?? ""}
                     onChange={(e: ChangeEvent<HTMLInputElement>) =>
                       atualizarEstado(e)
                     }
