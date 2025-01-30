@@ -35,7 +35,7 @@ function Home() {
                             zIndex: 2,
                             position: "relative",
                         }}>
-                            <h2 className="font-title text-5xl text-primary" style={{
+                            <h2 className="font-title text-5xl text-primary " style={{
                                 position: "absolute",
                                 top: "20%",
                                 transform: "translateX(60%)",
