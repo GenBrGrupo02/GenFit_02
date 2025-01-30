@@ -33,13 +33,14 @@ function App() {
               <Route path="/home" element={<Home />} />
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/logininstrutores" element={<LoginInstrutor />} />
-              <Route path="/instrutores" element={<DashBoardInstrutor />} />
               <Route path="/sobrenos" element={<Sobrenos />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/perfil" element={<Perfil />} />
               <Route path="/exercicio" element={<ListaExercicios />} />
               <Route path="/objetivos" element={<ListaObjetivos />} />
+              {" "}
+              <Route path="/logininstrutores" element={<LoginInstrutor />} />
+              <Route path="/instrutores" element={<DashBoardInstrutor />} />
               <Route path="/instrutorexercicios" element={<InstrutorExercicios />} />
               <Route path="/instrutorobjetivos" element={<InstrutorObjetivos />} />
               {" "}
@@ -47,6 +48,7 @@ function App() {
               <Route path="/todosobjetivos" element={<TodosObjetivos />} />
               <Route path="/verobjetivos" element={<VerObjetivos />} />
               <Route path="/verexercicios" element={<VerExercicios />} />
+              {" "}
               <Route path="/deletarexercicio/:id" element={<DeletarExercicio />} />
               <Route path="/editarexercicio/:id" element={<ExercicioForm />} />
               {" "}
