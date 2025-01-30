@@ -15,9 +15,21 @@ function Navbar() {
     };
 
     return (
-        <div className="w-full flex justify-center py-4 bg-base-100 text-white">
+        <div className="w-full flex justify-center py-4 bg-base-100 text-white ">
             <div className="container flex justify-between text-lg ">
                 <span className="font-title text-yellow-500">GENFIT</span>
+                <div>
+                    
+                <img
+                                src="https://i.imgur.com/UoA4cEN.png"
+                                alt="Imagem da Página Home"
+                                style={{
+                                    width: "8vh",
+                                    height: "auto",
+                                }}
+                            />
+                </div>
+                
 
                 <div className="flex gap-8 font-body  justify-end items-center ">
 

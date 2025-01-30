@@ -1,4 +1,4 @@
-import { FacebookLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
+import { FacebookLogo, InstagramLogo, LinkedinLogo, WhatsappLogo } from "@phosphor-icons/react";
 
 function Footer() {
     const currentYear = new Date().getFullYear();
@@ -49,23 +49,25 @@ function Footer() {
                 </div>
             </div>
 
-            {/* Rodapé inferior */}
+            
             <div className="text-center mt-8 text-gray-500">
                 &copy; {currentYear} Genfit Academia Generation | Todos os direitos reservados.
             </div>
 
-            {/* Botões Fixos (Contato e Scroll Up) */}
+        
             <div className="fixed bottom-4 right-4 flex flex-col space-y-3">
-                {/* Botão de Telefone */}
-                <a href="tel:+5511999999999" className="bg-yellow-500 p-3 rounded-full shadow-lg hover:bg-yellow-400 flex items-center justify-center">
-    📞
+               
+                <a href="tel:+5511999999999" className="bg-neutral p-3 rounded-full shadow-lg hover:bg-base-200 flex items-center justify-center">
+                <WhatsappLogo size={32} color="#21a810" weight="fill" />
 </a>
 
                 <button
-                    className="bg-blue-500 p-3 rounded-full shadow-lg hover:bg-blue-400"
+                    className="bg-neutral p-3 rounded-full shadow-lg hover:bg-base-200 flex items-center justify-center"
                     onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 >
-                    ⬆️
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 15l7-7 7 7"></path>
+                    </svg>
                 </button>
             </div>
         </footer>
