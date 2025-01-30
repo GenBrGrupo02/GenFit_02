@@ -10,6 +10,8 @@ import Perfil from "./pages/perfil/Perfil";
 import { AuthProvider } from "./contexts/AuthContext";
 import ListaExercicios from "./components/exercicios/ListaExercicios";
 import ListaObjetivos from "./components/objetivos/listaobjetivos/ListaObjetivos";
+import LoginInstrutor from "./pages/logininstrutor/LoginInstrutor";
+import DashBoardInstrutor from "./pages/dashboardinstrutor/DashboardInstrutor";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/logininstrutores" element={<LoginInstrutor />} />
+            <Route path="/instrutores" element={<DashBoardInstrutor />} />
             <Route path="/sobrenos" element={<Sobrenos />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/perfil" element={<Perfil />} />
