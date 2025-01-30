@@ -25,6 +25,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
     usuario: "",
     senha: "",
     foto: "",
+    peso: 0,
+    altura: 0,
+    imc: 0,
     token: "",
   });
 
@@ -48,6 +51,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
       usuario: "",
       senha: "",
       foto: "",
+      peso: 0,
+      altura: 0,
+      imc: 0,
       token: "",
     });
   }
