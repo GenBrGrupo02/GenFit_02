@@ -35,7 +35,7 @@ function Dashboard() {
           <div className="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6 mb-8">
             <div className="mt-2 flex items-center text-sm text-neutral-content">
               <MapPin size={20} weight="fill" className="mr-1.5" />
-              Academia Gen - Rua General Brasil, 1000
+              Academia Gen - Rua Geração Brasil, 1000
             </div>
             <div className="mt-2 flex items-center text-sm text-neutral-content">
               <Medal size={20} weight="fill" className="mr-1.5" />
@@ -44,7 +44,7 @@ function Dashboard() {
           </div>
         </div>
         <div className="mt-5 flex lg:mt-0 lg:ml-4 mr-12">
-          <Link to="/exercicio">
+          <Link to="/todosexercicios">
             <span className="hidden sm:block">
               <button
                 type="button"
@@ -57,7 +57,7 @@ function Dashboard() {
             </span>
           </Link>
           <span className="sm:ml-3">
-            <Link to="/objetivos">
+            <Link to="/todosobjetivos">
               <span className="hidden sm:block">
                 <button
                   type="button"
@@ -82,9 +82,6 @@ function Dashboard() {
             </Link>
           </span>
         </div>
-      </div>
-      <div>
-        <ListaExercicios />
       </div>
     </>
   );

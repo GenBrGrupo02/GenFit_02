@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
 import { ChangeEvent, useContext, useEffect, useState } from "react";
 import UsuarioLogin from "../../models/UsuarioLogin";
@@ -24,6 +24,10 @@ function LoginInstrutor() {
       ...usuarioLogin,
       [e.target.name]: e.target.value,
     });
+  }
+  
+  function retornar() {
+    navigate("/login");
   }
 
   function login(e: ChangeEvent<HTMLFormElement>) {
@@ -91,22 +95,30 @@ function LoginInstrutor() {
                   />
                 </label>
               </div>
-              <button
-                type="submit"
-                className="btn btn-primary text-neutral font-bold w-1/2 py-2 flex justify-center mx-auto"
-              >
-                {isLoading ? (
-                  <RotatingLines
-                    strokeColor="white"
-                    strokeWidth="5"
-                    animationDuration="0.75"
-                    width="24"
-                    visible={true}
-                  />
-                ) : (
-                  <span>Entrar</span>
-                )}
-              </button>
+              <div className="flex justify-center w-full p-4">
+                <button
+                  className="btn btn-accent text-neutral font-bold w-1/2 py-2 mr-3"
+                  onClick={retornar}
+                >
+                  <Link to="/login">Cancelar</Link>
+                </button>
+                <button
+                  type="submit"
+                  className="btn btn-primary text-neutral font-bold w-1/2 py-2 ml-3"
+                >
+                  {isLoading ? (
+                    <RotatingLines
+                      strokeColor="white"
+                      strokeWidth="5"
+                      animationDuration="0.75"
+                      width="24"
+                      visible={true}
+                    />
+                  ) : (
+                    <span>Entrar</span>
+                  )}
+                </button>
+              </div>
 
               <hr className="border-slate-800 w-full" />
             </form>
