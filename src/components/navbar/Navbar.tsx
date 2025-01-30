@@ -1,10 +1,6 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../contexts/AuthContext";
 
 function Navbar() {
-  const { usuario, handleLogout } = useContext(AuthContext); 
-
   return (
     <>
       <div className="w-full flex justify-center py-4 bg-base-100 text-white">
@@ -22,19 +18,15 @@ function Navbar() {
             </Link>
           </div>
 
-          <div className="flex gap-8 font-body justify-end items-center">
-            {!usuario.token ? (
-              <Link to="/login" className="hover:underline">
-                <button className="btn btn-outline">LOGIN</button>
-              </Link>
-            ) : (
-              <>
-                <span className="text-lg">{usuario.nome}</span>
-                <button className="btn btn-outline" onClick={handleLogout}>
-                  LOGOUT
-                </button>
-              </>
-            )}
+          <div className="flex gap-8 font-body  justify-end items-center ">
+            <Link to="/login" className="hover:underline">
+              <button className="btn btn-outline">LOGIN</button>
+            </Link>
+            <Link to="/logininstrutores" className="hover:underline">
+              <button className="btn btn-outline btn-secondary text-base-300">
+                INSTRUTORES
+              </button>
+            </Link>
             <Link to="/sobrenos" className="hover:underline">
               <button className="btn btn-outline btn-warning">SOBRE NÓS</button>
             </Link>
