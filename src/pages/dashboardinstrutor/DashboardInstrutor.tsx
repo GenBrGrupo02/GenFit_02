@@ -27,7 +27,7 @@ function DashBoardInstrutor() {
       <div className="lg:flex lg:items-center lg:justify-between">
         <div className="min-w-screen flex-1 m-12">
           <h2 className=" text-2xl/7 font-bold text-yellow-500 sm:truncate sm:text-3xl sm:tracking-tight mb-12">
-            DASHBOARD DO IINSTRUTOR
+            DASHBOARD DO INSTRUTOR
           </h2>
           <h2 className=" text-2xl/7 font-bold text-secondary sm:truncate sm:text-3xl sm:tracking-tight mb-2">
             Bem vinde de volta {usuario.nome}!
