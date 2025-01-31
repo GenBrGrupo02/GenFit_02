@@ -1,10 +1,11 @@
 import { useForm } from "react-hook-form";
 import Exercicio from "../../models/Exercicio";
+import { useParams } from "react-router-dom";
 
 // TODO: Function type will conflict when used in routing.
 // Required using another component so it won't conflict.
 
-export default function ExercicioForm({
+export default function FormExercicios({
   onSubmit,
 }: {
   onSubmit: (data: Exercicio) => void;
@@ -20,12 +21,16 @@ export default function ExercicioForm({
     },
   });
 
+  const { id } = useParams();
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
       className="max-w-xl mx-auto p-6 bg-neutral text-white rounded-xl shadow-lg"
     >
-      <h2 className="text-2xl font-bold mb-4">Adicionar Exercício</h2>
+      <h2 className="text-2xl font-bold mb-4">
+        {id ? "Editar Exercício" : "Adicionar Exercício"}
+      </h2>
 
       <label className="block mb-2">Nome:</label>
       <input
@@ -48,7 +53,7 @@ export default function ExercicioForm({
         type="number"
         {...register("usuario.id", {
           valueAsNumber: true,
-          required: "Usuário é obrigatório",
+          // required: "Usuário é obrigatório",
         })}
         className="input input-bordered w-full mb-2"
       />
@@ -61,7 +66,7 @@ export default function ExercicioForm({
         type="number"
         {...register("objetivo.id", {
           valueAsNumber: true,
-          required: "Objetivo é obrigatório",
+          // required: "Objetivo é obrigatório",
         })}
         className="input input-bordered w-full mb-2"
       />
@@ -97,7 +102,7 @@ export default function ExercicioForm({
       )}
 
       <button type="submit" className="btn btn-primary w-full mt-4">
-        Adicionar Exercício
+        {id ? "Editar Exercício" : "Adicionar Exercício"}
       </button>
     </form>
   );

@@ -18,7 +18,7 @@ import TodosObjetivos from "./pages/objetivos/TodosObjetivos";
 import TodosExercicios from "./pages/exercicios/TodosExercicios";
 import VerObjetivos from "./pages/dashboardinstrutor/VerObjetivos";
 import VerExercicios from "./pages/dashboardinstrutor/VerExcercicios";
-import ExercicioForm from "./components/exercicios/FormExercicio";
+import FormExercicios from "./components/exercicios/FormExercicio";
 import DeletarExercicio from "./components/exercicios/DeletarExercicio";
 
 function App() {
@@ -37,21 +37,29 @@ function App() {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/perfil" element={<Perfil />} />
               <Route path="/exercicio" element={<ListaExercicios />} />
-              <Route path="/objetivos" element={<ListaObjetivos />} />
-              {" "}
+              <Route path="/objetivos" element={<ListaObjetivos />} />{" "}
               <Route path="/logininstrutores" element={<LoginInstrutor />} />
               <Route path="/instrutores" element={<DashBoardInstrutor />} />
-              <Route path="/instrutorexercicios" element={<InstrutorExercicios />} />
-              <Route path="/instrutorobjetivos" element={<InstrutorObjetivos />} />
-              {" "}
+              <Route
+                path="/instrutorexercicios"
+                element={<InstrutorExercicios />}
+              />
+              <Route
+                path="/instrutorobjetivos"
+                element={<InstrutorObjetivos />}
+              />{" "}
               <Route path="/todosexercicios" element={<TodosExercicios />} />
               <Route path="/todosobjetivos" element={<TodosObjetivos />} />
               <Route path="/verobjetivos" element={<VerObjetivos />} />
-              <Route path="/verexercicios" element={<VerExercicios />} />
-              {" "}
-              <Route path="/deletarexercicio/:id" element={<DeletarExercicio />} />
-              <Route path="/editarexercicio/:id" element={<ExercicioForm onSubmit={() => {}} />} />
-              {" "}
+              <Route path="/verexercicios" element={<VerExercicios />} />{" "}
+              <Route
+                path="/deletarexercicio/:id"
+                element={<DeletarExercicio />}
+              />
+              <Route
+                path="/editarexercicio/:id"
+                element={<FormExercicios onSubmit={() => {}} />}
+              />{" "}
             </Routes>
           </div>
           <Footer />

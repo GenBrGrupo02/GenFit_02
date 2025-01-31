@@ -1,7 +1,8 @@
 import axios from "axios";
+import Exercicio from "../models/Exercicio";
 
 const api = axios.create({
-    baseURL: "https://genfit-k0rq.onrender.com/"
+    baseURL: "https://genfit-k0rq.onrender.com"
 })
 
 export const cadastrarUsuario = async (url : string, dados: Object, setDados: Function  ) => {
@@ -31,4 +32,14 @@ export const atualizar = async (url: string, dados: Object, setDados: Function, 
 
 export const deletar = async (url: string, header: Object) => {
     await api.delete(url, header)
+}
+
+// Exercícios
+
+export const createExercicio = async (dados: Exercicio, header: Object) => {
+    await api.post("/exercicio", dados, header)
+}
+
+export const updateExercicio = async (dados: Exercicio, header: Object) => {
+    await api.put("/exercicio", dados, header)
 }
