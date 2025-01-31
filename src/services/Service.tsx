@@ -1,5 +1,6 @@
 import axios from "axios";
 import Exercicio from "../models/Exercicio";
+import Usuario from "../models/Usuario";
 
 const api = axios.create({
     baseURL: "https://genfit-k0rq.onrender.com"
@@ -42,4 +43,11 @@ export const createExercicio = async (dados: Exercicio, header: Object) => {
 
 export const updateExercicio = async (dados: Exercicio, header: Object) => {
     await api.put("/exercicio", dados, header)
+}
+
+// Get Usuario
+
+export const getUser = async (id: number, header: Object) => {
+    const response = await api.get<Usuario>(`/usuarios/${id}`, header);
+    return response;
 }

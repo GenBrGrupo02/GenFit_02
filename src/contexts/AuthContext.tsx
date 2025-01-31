@@ -42,9 +42,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     setIsLoading(true);
     try {
       await login(`/usuarios/logar`, usuarioLogin, setUsuario);
-
       localStorage.setItem("usuario", JSON.stringify(usuario));
-
       alert("O Usuário foi autenticado com sucesso!");
     } catch (error) {
       alert("Os Dados do usuário estão inconsistentes!");

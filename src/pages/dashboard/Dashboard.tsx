@@ -7,21 +7,46 @@ import {
   Ruler,
   SignOut,
 } from "@phosphor-icons/react";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
+import { getUser } from "../../services/Service";
+import Usuario from "../../models/Usuario";
 // import ListaExercicios from "../../components/exercicios/ListaExercicios";
 
 function Dashboard() {
   const navigate = useNavigate();
+  const [ userData, setUserData ] = useState<Usuario>();
+  const [ imc, setImc ] = useState<Number>(0);
 
   const { usuario, handleLogout } = useContext(AuthContext);
+
+  const getAsyncUser = async () => {
+    try {
+      const userResponse = await getUser(usuario.id, {
+        headers: {
+          Authorization: usuario.token,
+        },
+      });
+      setUserData(userResponse.data);
+    } catch (error: any) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     if (usuario.token === "") {
       alert("Você precisa estar logado");
       navigate("/");
+    } else {
+      getAsyncUser()
     }
   }, [usuario.token]);
+
+  useEffect(() => {
+    if(userData?.id) {
+      setImc(userData.peso / (userData.altura * userData.altura));
+    }
+  }, [userData?.id]);
 
   return (
     <>
@@ -44,7 +69,7 @@ function Dashboard() {
             </div>
             <div className="mt-2 flex items-center text-sm text-neutral-content">
               <Ruler size={20} weight="fill" className="mr-1.5" />
-              IMC 20{usuario.imc}
+              IMC {imc ? `${imc.toFixed(2)}` : "não disponível"}
             </div>
           </div>
         </div>

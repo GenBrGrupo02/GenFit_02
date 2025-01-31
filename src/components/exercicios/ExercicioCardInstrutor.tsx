@@ -28,7 +28,7 @@ function CardExercicioInstrutor({ exercicio }: CardExerciciosProps) {
     setIsLoading(true);
 
     try {
-      await deletar(`/postagens/${exercicio.id}`, {
+      await deletar(`/exercicio/${exercicio.id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
